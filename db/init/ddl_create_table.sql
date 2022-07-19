@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS `game` DEFAULT CHARACTER SET utf8mb4 ;
+USE `game` ;
+
+SET CHARSET utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `game`.`user` (
+  `id` int(11) AUTO_INCREMENT COMMENT 'ID',
+  `name` VARCHAR(128) NOT NULL COMMENT '名前',
+  `auth` VARCHAR(128) COMMENT '認証情報',
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+COMMENT = 'ユーザー';
